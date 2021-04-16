@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int a,b;//a=10,b=5
+    printf("Enter the values of a and b: ");
+    scanf("%d%d",&a,&b);
+    a=a-b;//a=10-5=5
+    b=a+b;//b=5+5=10
+    a=b-a;//a=10-5=5
+    printf("After swapping of two variables is: %d %d",a,b);
+    return 0;
+}
