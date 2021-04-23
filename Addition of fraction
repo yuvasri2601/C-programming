@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int num1,num2,deno1,deno2,a,b,c;
+    printf("Enter the first numerator and first denominator: ");
+    scanf("%d%d",&num1,&deno1);
+    printf("Enter the second numerator and second denominator: ");
+    scanf("%d%d",&num2,&deno2);
+    if(deno1==deno2)
+    {
+        a=(num1+num2);
+        b=deno1;
+        printf("Fraction of %d/%d is: ",a,b);
+    }
+    else
+    {
+        a=(num1*deno2)+(num2*deno1);
+        b=deno1*deno2;
+        printf("Addition of Fraction is: %d/%d ",a,b);
+    }
+    return 0;
+}
+
