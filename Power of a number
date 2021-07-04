@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int base,exp, result;
+    printf("Enter the base: ");
+    scanf("%d",&base);
+    printf("Enter the exp: ");
+    scanf("%d",&exp);
+    result=pow(base,exp);
+    printf("%d",result);
+    return 0;
+}
