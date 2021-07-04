@@ -1,0 +1,15 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    char c;
+    printf("Enter the character: ");
+    scanf("%c",&c);
+    if(isalpha(c))
+      printf("%c is an alphabet",c) ;
+    else
+      printf("%c is not an alphabet",c);
+    return 0;
+}
+
