@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    int C,D,L,C_legs,D_legs,Total;
+    scanf("%d%d%d",&C,&D,&L);
+    C_legs=C*2;
+    D_legs=D*2;
+    Total=C_legs+D_legs;
+    if(Total==L)
+        printf("Yes");
+    else
+        printf("No");
+}
