@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    float amount,total;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%f",&amount);
+        if(amount<10000)
+        {
+            total=total+amount*0.04;
+            printf("Person %d : %.2f\n",i,amount*0.04);
+            
+            
+        }
+        else
+        {
+            total=total+amount*0.05;
+            printf("Person %d : %.2f\n",i,amount*0.05);
+            
+        }
+    }
+    printf("Total Commission :%.2f",total);
+        
+    return 0;
+}
