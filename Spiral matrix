@@ -1,0 +1,73 @@
+#include<stdio.h>
+int main()
+{
+    int n,m,i,j;
+    printf("Enter the row: ");
+    scanf("%d",&n);
+    printf("Enter the column: ");
+    scanf("%d",&m);
+    int matrix[n][m];
+    printf("Enter the matrix elements: ");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+           scanf("%d",&matrix[i][j]);
+        }
+    }
+    printf("Matrix:\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%d ",matrix[i][j]);
+        }
+        printf("\n");
+    }
+    printf("spiral matrix:\n");
+    int top=0,down=n-1,left=0, right=n-1,dir=0;
+    while(left<=right && top<=down)
+    {
+        if(dir==0)
+        {
+            for(i=left;i<=right;i++)
+            {
+                printf("%d ",matrix[top][i]);
+            }
+            top++;
+            //printf("\n");
+        }
+        if(dir==1)
+        {
+            for(i=top;i<=down;i++)
+            {
+                printf("%d ",matrix[i][right]);
+            }
+            right--;
+            //printf("\n");
+        }
+        if(dir==2)
+        {
+            for(i=right;i>=left;i--)
+            {
+                printf("%d ",matrix[down][i]);
+            }
+            down--;
+            //printf("\n");
+        }
+        if(dir==3)
+        {
+            for(i=down;i>=top;i--)
+            {
+                printf("%d ",matrix[i][left]);
+            }
+            left++;
+            //printf("\n");
+        }
+    dir=(dir+1)%4;
+    }
+    return 0;
+}
+
+    
+ 
