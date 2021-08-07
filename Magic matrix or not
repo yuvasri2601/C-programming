@@ -1,0 +1,68 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,j,flag=0;
+    scanf("%d",&n);
+    int matrix [n][n];
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&matrix[i][j]);
+        }
+    }
+    int sum=0;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i==j)
+            {
+                sum=sum+matrix[i][j];
+            }
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        int sum1=0;
+        for(j=0;j<n;j++)
+        {
+            sum1=sum1+matrix[i][j];
+        }
+        if(sum1==sum){
+            flag=1;
+        }
+        else
+        {
+            flag=0;
+            break;
+        }
+        
+    }
+    for(i=0;i<n;i++)
+    {
+        int sum2=0;
+        for(j=0;j<n;j++)
+        {
+            sum2=sum2+matrix[i][j];
+        }
+        if(sum==sum2)
+        {
+            flag=1;
+        }
+        else
+        {
+            flag=0;
+            break;
+        }
+    }
+    if(flag==1)
+    {
+        printf("Magic matrix");
+    }
+    else
+    {
+        printf("Not a magic matrix");
+    }
+    return 0;
+}
